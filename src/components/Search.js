@@ -35,10 +35,16 @@ class Search extends Component {
     });
   }
 
+  /**
+   * Handle async data loading
+   */
   componentDidMount() {
     this.loadSentences();
   }
 
+  /**
+   * Handle search (and future) fields
+   */
   handleComponentInput = e => {
     this.setState({
       [`${e.target.name}`]: `${e.target.value}`
